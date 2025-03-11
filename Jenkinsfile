@@ -6,13 +6,13 @@ pipeline {
     agent any
     environment {
         strDockerTag = "${TODAY}_${BUILD_ID}"
-        strDockerImage ="yu3papa/cicd_guestbook:${strDockerTag}"
+        strDockerImage ="kimwk0229/cicd_guestbook:${strDockerTag}"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url:'https://github.com/yu3papa/guestbook.git'
+                git branch: 'master', url:'https://github.com/kimwk0229/guestbook.git'
             }
         }
         stage('Build') {
